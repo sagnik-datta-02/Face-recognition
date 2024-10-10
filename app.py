@@ -155,6 +155,7 @@ def process_images_from_urls_in_batches(reference_image_path, image_urls, batch_
     return matching_images
 
 # Main entry point for the application
-if __name__ == "__main__":
-    print("Starting Flask app...")  # Log
-    app.run(debug=True)
+if __name__ == '__main__':
+    # Use the PORT environment variable, defaulting to 5000 if not set
+    port = 5000
+    app.run(host='0.0.0.0', port=port)
