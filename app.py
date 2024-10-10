@@ -157,5 +157,5 @@ def process_images_from_urls_in_batches(reference_image_path, image_urls, batch_
 # Main entry point for the application
 if __name__ == '__main__':
     # Use the PORT environment variable, defaulting to 5000 if not set
-    port = 5000
+    port = int(os.environ.get('PORT', 10000))
     app.run(host='0.0.0.0', port=port)
